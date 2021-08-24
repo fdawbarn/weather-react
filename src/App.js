@@ -1,65 +1,105 @@
 
 import "./App.css";
 import Search from "./Search";
-import Location from "./Location";
-import Updated from "./Updated";
-import Current from "./Current";
+import ReactAnimatedWeather from "react-animated-weather";
+
+
 import Forecast from "./Forecast";
 
 export default function App() {
   return (
-    <div class="container">
+    <div className="container">
       <div className="App">
         <h1>Weather checker</h1>
-        <div class="weather-app-wrapper">
-          <div class="weather-app">
+        <div className="weather-app-wrapper">
+          <div className="weather-app">
             <Search />
             <br />
-            <Location />
             <br />
-            <h2>London</h2>
-            <br />
-            <Updated />
-            <br />
-            <Current />
-            <br />
-            <div class="row">
-              <div class="col">
+            <div className="row">
+              <div className="col">
                 <Forecast day="Monday" />
               </div>
-              <div class="col">
+              <div className="col">
                 <Forecast day="Tuesday" />
               </div>
-              <div class="col">
+              <div className="col">
                 <Forecast day="Wednesday" />
               </div>
-              <div class="col">
+              <div className="col">
                 <Forecast day="Thursday" />
               </div>
-              <div class="col">
+              <div className="col">
                 <Forecast day="Friday" />
               </div>
             </div>
-            <div class="row">
-              <div class="col">
+            <div className="row">
+              <div className="col">
                 <Forecast value="22°C" />
               </div>
-              <div class="col">
+              <div className="col">
                 <Forecast value="21°C" />
               </div>
-              <div class="col">
+              <div className="col">
                 <Forecast value="20°C" />
               </div>
-              <div class="col">
+              <div className="col">
                 <Forecast value="22°C" />
               </div>
-              <div class="col">
+              <div className="col">
                 <Forecast value="23°C" />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                 <ReactAnimatedWeather
+        icon="CLOUDY"
+        color="#757a79"
+        size={40}
+        animate={true}
+      />
+
+              </div>
+              <div className="col">
+                <ReactAnimatedWeather
+        icon="CLEAR_DAY"
+        color="#fecd51"
+        size={40}
+        animate={true}
+      />
+              </div>
+              <div className="col">
+                <ReactAnimatedWeather
+        icon="RAIN"
+        color="#757a79"
+        size={40}
+        animate={true}
+      />
+              </div>
+              <div className="col">
+                <ReactAnimatedWeather
+        icon="CLEAR_DAY"
+        color="#fecd51"
+        size={40}
+        animate={true}
+      />
+              </div>
+              <div className="col">
+                <ReactAnimatedWeather
+        icon="PARTLY_CLOUDY_DAY"
+        color="#fecd51"
+        size={40}
+        animate={true}
+      />
               </div>
             </div>
           </div>
         </div>
       </div>
+      <p> 
+        <a href="https://github.com/fdawbarn/weather-react" target="_blank" rel="noreferrer">Open-source code, by Freya Dawbarn</a>
+         </p>
     </div>
+    
   );
 }
